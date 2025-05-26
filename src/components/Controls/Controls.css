@@ -6,9 +6,9 @@
   top: 2rem;
 
   button {
-    margin: 5px;
-    padding: 10px 20px;
-    font-size: 1.5rem;
+    margin: 0.5em;
+    padding: 0.5em 1em;
+    font-size: 0.8rem;
     cursor: pointer;
     background-color: #007bff;
     color: white;
@@ -18,6 +18,11 @@
 
     &:hover {
       background-color: #0056b3;
+    }
+
+    &[data-selected] {
+      background-color: darkgoldenrod;
+      color: white;
     }
   }
 }

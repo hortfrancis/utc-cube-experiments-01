@@ -4,6 +4,7 @@ import Controls from './components/Controls/Controls';
 import Cube01 from './components/Cube01/Cube01';
 import Cube02 from './components/Cube02/Cube02';
 import Cube03 from './components/Cube03/Cube03';
+import Cube04 from './components/Cube04/Cube04';
 
 
 function App() {
@@ -30,10 +31,11 @@ function App() {
 
   return (
     <>
-      <Controls onClick={handleControlsOnClick} />
+      <Controls onClick={handleControlsOnClick} currentCube={display} />
       {display === 'cube-01' && <Cube01 />}
       {display === 'cube-02' && <Cube02 />}
       {display === 'cube-03' && <Cube03 />}
+      {display === 'cube-04' && <Cube04 />}
 
     </>
   )
