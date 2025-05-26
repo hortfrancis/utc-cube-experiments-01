@@ -1,0 +1,76 @@
+:root {
+  --cube-size: 300px;
+  --cube-half-size: calc(var(--cube-size) / 2);
+}
+
+.scene {
+  perspective: 800px;
+  perspective-origin: center;
+  width: var(--cube-size);
+  height: var(--cube-size);
+}
+
+@keyframes rotate {
+  to {
+    transform: rotateY(360deg);
+  }
+}
+
+.cube {
+  position: relative;
+  width: var(--cube-size);
+  height: var(--cube-size);
+
+  transform-style: preserve-3d;
+
+
+  animation: rotate 10s infinite linear;
+}
+
+.cube .face {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  /* top: 0; */
+  /* left: 0; */
+
+  background: gold;
+  border: 10px solid blue;
+  backface-visibility: hidden;
+  box-sizing: border-box;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2rem;
+}
+
+.cube .face.front {
+  transform: translateZ(var(--cube-half-size));
+  background: red;
+}
+
+.cube .face.back {
+  transform: rotateY(180deg) translateZ(var(--cube-half-size));
+  background: green;
+}
+
+.cube .face.left {
+  transform: rotateY(-90deg) translateZ(var(--cube-half-size));
+  background: purple;
+}
+
+.cube .face.right {
+  transform: rotateY(90deg) translateZ(var(--cube-half-size));
+  background: orange;
+}
+
+.cube .face.top {
+  transform: rotateX(90deg) translateZ(var(--cube-half-size));
+  background: cyan;
+}
+
+.cube .face.bottom {
+  transform: rotateX(-90deg) translateZ(var(--cube-half-size));
+  background: pink;
+}
