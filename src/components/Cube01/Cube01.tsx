@@ -5,8 +5,8 @@ export default function Cube01() {
 
 
   return (
-    <div className='scene'>
-      <div className="cube">
+    <div className='scene-01'>
+      <div className="cube-01">
         <div className="face front">
           <Face01 />
         </div>
