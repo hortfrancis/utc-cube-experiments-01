@@ -3,6 +3,7 @@ import './App.css';
 import Controls from './components/Controls/Controls';
 import Cube01 from './components/Cube01/Cube01';
 import Cube02 from './components/Cube02/Cube02';
+import Cube03 from './components/Cube03/Cube03';
 
 
 function App() {
@@ -32,6 +33,8 @@ function App() {
       <Controls onClick={handleControlsOnClick} />
       {display === 'cube-01' && <Cube01 />}
       {display === 'cube-02' && <Cube02 />}
+      {display === 'cube-03' && <Cube03 />}
+
     </>
   )
 }
