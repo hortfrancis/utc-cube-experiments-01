@@ -1,5 +1,5 @@
 :root {
-  --cube-size: 300px;
+  --cube-size: 200px;
   --cube-half-size: calc(var(--cube-size) / 2);
   --cube-gap: calc(var(--cube-size) / 30);
 }
